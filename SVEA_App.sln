@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVEA_App", "SVEA_App\SVEA_App.csproj", "{F99D6733-7218-465C-A6D9-4AFE38C5837C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PersonsData", "PersonsData\PersonsData.sqlproj", "{13CC8454-D5AE-457C-9326-9B29FC2DBE75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F99D6733-7218-465C-A6D9-4AFE38C5837C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99D6733-7218-465C-A6D9-4AFE38C5837C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99D6733-7218-465C-A6D9-4AFE38C5837C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99D6733-7218-465C-A6D9-4AFE38C5837C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13CC8454-D5AE-457C-9326-9B29FC2DBE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CC8454-D5AE-457C-9326-9B29FC2DBE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CC8454-D5AE-457C-9326-9B29FC2DBE75}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{13CC8454-D5AE-457C-9326-9B29FC2DBE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CC8454-D5AE-457C-9326-9B29FC2DBE75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13CC8454-D5AE-457C-9326-9B29FC2DBE75}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24FE27E6-7114-4E66-9AE5-A21D5831F86C}
+	EndGlobalSection
+EndGlobal
