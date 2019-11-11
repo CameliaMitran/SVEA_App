@@ -24,7 +24,7 @@ namespace SVEA_App.Models
         public string Name { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}"/*, ApplyFormatInEditMode = true*/)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = false)]
         public System.DateTime Birthdate { get; set; }
 
         [Required]

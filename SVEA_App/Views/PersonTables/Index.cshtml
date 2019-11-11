@@ -28,15 +28,6 @@
 
     @foreach (var item in Model)
     {
-
-        /////////////
-        /*string selectedRow = "";
-        if (item.PersonId == ViewBag.PersonID)
-        {
-            selectedRow = "success";
-        }//////////////
-
-        <tr class=" @selectedRow" > */
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.PersonId)
@@ -59,23 +50,47 @@
     }
 </table>
 
-<button id="button1" type="button">Process</button>
+<button id="processButton" type="button">Process</button>
+
+@{
+    ViewBag.Title = "Persons Table Index";
+}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-@*<script>
-    let thetable = document.getElementById('TableP').getElementsByTagName('tr')[0];
-    for (let i; i < thetable.)
-</script>
-
-<script>
-    $(document).ready(function () {
-        $("#button1").click(function () {
-            $('#TableP tr').each(function () {
-                
-            })
-
-        })
+<script type="text/javascript">
+    function ProcesNextPersonAfterDelay() {
+        let personsTable = document.getElementById('TableP')
+        let personCount = '@Model.Count()';
+        for (let currentPersonId = 1; currentPersonId <= personCount; currentPersonId++) {
+            (function (n) {
+                setTimeout(function () {
+                    ProcessNextPerson(n, personCount, personsTable);
+                    ClearLastPerson(n, personsTable);
+                }, 5000 * n);
+            })(currentPersonId);
+        }
+    }
+    function ProcessNextPerson(currentPersonId, personCount, personsTable) {
+        console.log("ProcessNextPerson " + currentPersonId);
+        if (currentPersonId > personCount) {
+            return;
+        }
+        let person = personsTable.getElementsByTagName('tr')[currentPersonId];
+        person.bgColor = '#ff6f5e';
+    }
+    function ClearLastPerson(currentPersonId, personsTable) {
+        console.log("ClearLastPerson currentPersonId" + currentPersonId);
+        if (currentPersonId <= 1) {
+            return;
+        }
+        let lastPersonId = currentPersonId - 1;
+        console.log("ClearLastPerson lastPersonId" + lastPersonId);
+        let person = personsTable.getElementsByTagName('tr')[lastPersonId];
+        person.bgColor = '#ffffff';
+    }
+    $(function() {
+        $('#processButton').on('click', ProcesNextPersonAfterDelay);
     });
 </script>
-*@
+
